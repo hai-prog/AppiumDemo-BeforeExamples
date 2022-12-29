@@ -1,0 +1,27 @@
+package pages;
+
+import Actions.ElementsActions;
+import Actions.MobileActions;
+import io.appium.java_client.AppiumBy;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+
+import java.awt.*;
+
+public class ViewsPage {
+
+    WebDriver driver;
+    // locators
+   private By radioGroub  = AppiumBy.accessibilityId("Radio Group");
+
+    public ViewsPage(WebDriver driver) {
+        this.driver = driver;
+    }
+
+    public RadioGroubpage clickOnVertices()
+    {
+        MobileActions.scrollDownToSpecificText("Radio Group");
+        ElementsActions.click(driver,radioGroub);
+        return new RadioGroubpage(driver);
+    }
+}
