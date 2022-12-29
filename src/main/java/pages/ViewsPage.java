@@ -6,8 +6,6 @@ import io.appium.java_client.AppiumBy;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-import java.awt.*;
-
 public class ViewsPage {
 
     WebDriver driver;
@@ -18,9 +16,9 @@ public class ViewsPage {
         this.driver = driver;
     }
 
-    public RadioGroubpage clickOnVertices()
+    public RadioGroubpage clickOnradioGroub()
     {
-        MobileActions.scrollDownToSpecificText("Radio Group");
+        ElementsActions.scrollDownToSpecificText(driver,"Radio Group");
         ElementsActions.click(driver,radioGroub);
         return new RadioGroubpage(driver);
     }

@@ -19,16 +19,9 @@ public class GraphicsPage {
 
     public VerticesPage clickOnVertices()
     {
-        MobileActions.scrollDownToSpecificText("Vertices");
+        ElementsActions.scrollDownToSpecificText(driver,"Vertices");
         ElementsActions.click(driver,vertices);
         return new VerticesPage(driver);
     }
 
-
-    public ScaleToFitPage clickOnScaleToFit()
-    {
-        ElementsActions.scrollDownToSpecificText(driver,"ScaleToFit");
-        ElementsActions.click(driver,ScaleToFit);
-        return new ScaleToFitPage(driver);
-    }
 }
